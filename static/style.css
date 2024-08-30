@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Personalización de la barra de desplazamiento */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000000; /* color de la zona de seguimiento */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(30, 41, 59, 0.4); /* color de la barra de desplazamiento */
+    border-radius: 20px; /* redondez de la barra de desplazamiento */
+    border: none;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: linear-gradient(135deg, #000000, #004e92,#c50909       )       ; /* Fondo difuminado azul y negro */
+    color: #F8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+img {
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del contenedor del formulario */
+.container {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo del formulario */
+    background: rgba(30, 41, 59, 0.8); /* Fondo semi-transparente */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Estilos de entrada y botón */
+input[type="text"], .form__button {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 15px 0; /* Espacio entre los elementos */
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type="text"] {
+    background: #0F172A;
+    color: #F8FAFC;
+    font-size: 16px;
+    border: 1px solid #1E293B;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1E40AF; /* Color al enfocar el campo de texto */
+}
+
+.form__button {
+    background: #1E40AF;
+    color: #F8FAFC;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+    background: #2563EB; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilo adicional para el contenedor de resultados */
+#clima {
+    margin-top: 20px;
+}
+
+#resultado {
+    background-color: #1E293B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#resultado strong {
+    color: #000000;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Clima</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta el Clima</h1>
+        <form method="POST">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa el nombre de la ciudad" required>
+            <button class="form__button" type="submit">Obtener Clima</button>
+        </form>
+
+        <div id="clima">
+            {% if clima %}
+                <p><strong>Ciudad:</strong> {{ clima.ciudad }}</p>
+                <p><strong>Temperatura:</strong> {{ clima.temperatura }}°C</p>
+                <p><strong>Presión:</strong> {{ clima.presion }} hPa</p>
+                <p><strong>Humedad:</strong> {{ clima.humedad }}%</p>
+                <p><strong>Descripción:</strong> {{ clima.descripcion }}</p>
+                <p><strong>Velocidad del Viento:</strong> {{ clima.viento }} m/s</p>
+            {% elif error %}
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
